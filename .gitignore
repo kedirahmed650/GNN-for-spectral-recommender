@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Python virtual environment
+.venv/
+venv/
+
+# IDE files
+.idea/
+.vscode/
+
+# Build/dist outputs
+.dist/
+
+# Dataset folder (optional, remove # if you don't want to upload ml-100k)
+# ml-100k/
+

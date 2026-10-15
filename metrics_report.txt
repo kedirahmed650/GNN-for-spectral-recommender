@@ -1,0 +1,74 @@
+﻿============================================================
+Experiment Report for Spectral Recommender (MovieLens 100K)
+============================================================
+
+Training set: u1.base, Samples = 80000
+Test set: u1.test, Samples = 20000
+Metrics: Recall@10, NDCG@10
+
+------------------------------------------------------------
+Method / K Recall@10        NDCG@10         
+------------------------------------------------------------
+5          0.071769         0.191779        
+10         0.091141         0.245211        
+20         0.106402         0.287874        
+30         0.111092         0.290874        
+50         0.103261         0.271964        
+------------------------------------------------------------
+Popularity Baseline 0.097498         0.325254        
+SVD (d=30) 0.185325         0.534644        
+------------------------------------------------------------
+
+Smallest 50 eigenvalue range: -0.00000000 to 0.77983455
+
+============================================================
+Fiedler Vector Analysis (2nd smallest eigenvalue, index = 1)
+============================================================
+
+Positive Extreme Top 10 Movies:
+ 1. 《Air Force One (1997)》 Score = +0.08561642
+ 2. 《English Patient, The (1996)》 Score = +0.07833422
+ 3. 《Devil's Advocate, The (1997)》 Score = +0.07794145
+ 4. 《Conspiracy Theory (1997)》 Score = +0.07754165
+ 5. 《Seven Years in Tibet (1997)》 Score = +0.07694952
+ 6. 《L.A. Confidential (1997)》 Score = +0.07580206
+ 7. 《G.I. Jane (1997)》 Score = +0.07515138
+ 8. 《Game, The (1997)》 Score = +0.07384101
+ 9. 《Titanic (1997)》 Score = +0.07026739
+10. 《Kiss the Girls (1997)》 Score = +0.06930443
+
+Negative Extreme Top 10 Movies:
+ 1. 《Back to the Future (1985)》 Score = -0.02558688
+ 2. 《E.T. the Extra-Terrestrial (1982)》 Score = -0.02529502
+ 3. 《Blues Brothers, The (1980)》 Score = -0.02511780
+ 4. 《Forrest Gump (1994)》 Score = -0.02476758
+ 5. 《Monty Python and the Holy Grail (1974)》 Score = -0.02465840
+ 6. 《Terminator, The (1984)》 Score = -0.02441218
+ 7. 《Sound of Music, The (1965)》 Score = -0.02424676
+ 8. 《Raiders of the Lost Ark (1981)》 Score = -0.02414894
+ 9. 《Blade Runner (1982)》 Score = -0.02402021
+10. 《Mrs. Doubtfire (1993)》 Score = -0.02400823
+
+Note: the sign direction of the positive/negative extremes is determined by the Fiedler vector;
+only the highest and lowest scoring ends are shown here.
+
+============================================================
+Cold-Start Comparison (Users with Few Training Ratings)
+============================================================
+
+Strict cold users (< 5 training ratings)
+Cold users with test items: 1
+Spectral Method (K=30) Recall@10 = 0.000000
+SVD (d=30) Recall@10 = 0.235294
+Spectral Method (K=30) NDCG@10 = 0.000000
+SVD (d=30) NDCG@10 = 0.517363
+Note: only one strict user exists, so this single-user result is highly noisy;
+use the low-activity group below for a more stable comparison.
+
+Low-activity group (< 10 training ratings)
+Cold users with test items: 6
+Spectral Method (K=30) Recall@10 = 0.095911
+SVD (d=30) Recall@10 = 0.153525
+Spectral relative retention of full-data Recall@10: 86.3%
+SVD relative retention of full-data Recall@10: 82.8%
+Higher relative retention means slower degradation on cold users.

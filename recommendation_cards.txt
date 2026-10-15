@@ -1,0 +1,30 @@
+====================================================================================================
+Recommendation Examples for Two Typical Users (Spectral Method, K=30)
+====================================================================================================
+Model trained on u1.base; already-rated movies are excluded.
+
+Action Fan -- Top 5 Recommendations
+User 386 (ratings=18): Action 100.0%, Thriller 55.6%, Adventure 44.4%
+----------------------------------------------------------------------------------------------------
+Rank Movie                                              Genres                            
+----------------------------------------------------------------------------------------------------
+1    "Daylight (1996)"                                  Action, Adventure, Thriller       
+2    "Escape from L.A. (1996)"                          Action, Adventure, Sci-Fi, Thriller
+3    "Dragonheart (1996)"                               Action, Adventure, Fantasy        
+4    "Lost World: Jurassic Park, The (1997)"            Action, Adventure, Sci-Fi, Thriller
+5    "Broken Arrow (1996)"                              Action, Thriller                  
+
+Romance Fan -- Top 5 Recommendations
+User 914 (ratings=23): Romance 91.3%, Comedy 56.5%, Drama 52.2%
+----------------------------------------------------------------------------------------------------
+Rank Movie                                              Genres                            
+----------------------------------------------------------------------------------------------------
+1    "Pompatus of Love, The (1996)"                     Comedy, Drama                     
+2    "Nothing to Lose (1994)"                           Drama                             
+3    "Big Bully (1996)"                                 Comedy, Drama                     
+4    "Stripes (1981)"                                   Comedy                            
+5    "Nina Takes a Lover (1994)"                        Comedy, Romance                   
+
+The action fan is selected by Action-genre concentration in training ratings,
+and the romance fan is selected by Romance-genre concentration. Genre labels come from u.item.
+
